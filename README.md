@@ -27,3 +27,24 @@ This project uses a Decision Tree Classifier from scikit‑learn to predict peng
 * Decision Tree Training — fitting the model on physical measurements
 
 * Confusion Matrix — evaluating classification accuracy and misclassifications
+
+## How to run the Notebook (Google Colab)
+This notebook currently imports the dataset directly from the raw CSV hosted in this GitHub repository, so no manual file upload is required.
+
+However, if any issues occur with remote loading (e.g., network errors, GitHub rate limits), you can fall back to using the local `penguins.csv` file included in this repository.
+
+**Option 1 — Normally**\
+The notebook loads the dataset using the raw GitHub URL, so you can simply run all cells without additional setup.
+
+**Option 2 — Manual Import**\
+If the automatic import fails:
+
+1.  Download `penguins.csv` from this repository
+2.  Upload it to your Google Drive.
+3.  Mount Google Drive in Colab:
+    ```python
+    from google.colab import drive
+    drive.mount('/content/drive')
+    ```
+4.  Update the file path in the notebook to point to the location of `penguins.csv` in your Drive.
+5.  Run all cells sequentially to execute to the full machine learning workflow.
